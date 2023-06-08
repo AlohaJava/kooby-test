@@ -11,4 +11,4 @@ WORKDIR /myapp
 COPY --from=build /myapp/build/libs/myapp-1.0.0-all.jar app.jar
 COPY conf conf
 EXPOSE 8080
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.jar", "prod"]
