@@ -8,7 +8,7 @@ RUN gradle shadowJar
 
 FROM openjdk:17-jdk-slim
 WORKDIR /myapp
-COPY --from=build /myapp/build\libs\myapp-1.0.0-all.jar app.jar
+COPY --from=build /myapp/build/libs/myapp-1.0.0-all.jar app.jar
 COPY conf conf
 EXPOSE 8080
 CMD ["java", "-jar", "app.jar"]
